@@ -1,0 +1,7 @@
+__pycache__/
+translated/*
+uploads/*
+.env
+*.ipynb
+tmp/*
+file

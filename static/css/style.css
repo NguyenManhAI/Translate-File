@@ -1,0 +1,161 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Khung form */
+form {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Để căn chỉnh spinner bên trong */
+}
+
+/* H1 nằm trong form và ở trên cùng */
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa h1 và form */
+}
+
+/* Khung chứa danh sách file */
+.file-list {
+    max-height: 200px; /* Đặt chiều cao cố định */
+    overflow-y: auto; /* Hiển thị thanh trượt dọc nếu nội dung quá dài */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Danh sách file */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Nút quay lại */
+input[type="button"] {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[type="button"]:hover {
+    background-color: #004494;
+}
+
+/* Label và input */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    font-size: 14px;
+}
+
+/* Nút gửi */
+input[type="submit"] {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #004494;
+}
+
+/* Khoảng cách giữa các phần */
+br {
+    margin-bottom: 16px;
+}
+
+/* Đang dịch - spinner ở dưới cùng trong form */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 20px auto;
+}
+
+/* Thông báo "Translating..." dưới spinner */
+.translating-message {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    position: absolute;
+    bottom: 20px; /* Đặt thông báo gần với spinner */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Ẩn thông báo khi không cần thiết */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Đáp ứng trên thiết bị di động */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+}
